@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.nisha.googleflights.Search_Flights"
+    android:weightSum="2">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:weightSum="1">
+                 <RadioGroup
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:paddingLeft="@dimen/activity_horizontal_margin"
+                     android:paddingRight="@dimen/activity_horizontal_margin"
+                     android:id="@+id/radioGroup">
+                     <RadioButton
+                         android:layout_width="0dp"
+                         android:layout_weight="50"
+                         android:layout_height="wrap_content"
+                         android:text="Round Trip"
+                         android:id="@+id/radioRound"
+                         android:checked="false" />
+                     <RadioButton
+                         android:layout_width="0dp"
+                         android:layout_weight="50"
+                         android:layout_height="wrap_content"
+                         android:text="One way"
+                         android:id="@+id/radioOne"
+                         android:checked="false" />
+
+                 </RadioGroup>
+             </LinearLayout>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#ffffff">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="109dp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/imv_flght"
+                        android:layout_width="50dp"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/flg"/>
+
+
+                    <android.support.design.widget.TextInputLayout
+                            android:id="@+id/levTextInputLayyout"
+                            android:layout_width="123dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="50dp">
+                          <AutoCompleteTextView
+                                android:id="@+id/ed_lvfrm"
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:textColor="@android:color/darker_gray"
+                                android:paddingTop="16dp" android:visibility="visible"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:hint="Leaving From" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/goingTextInputLaayout"
+                            android:layout_width="123dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/ed_gng"
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:textColor="@android:color/darker_gray"
+                                android:paddingTop="16dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:hint="Going To" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#ffffff">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="109dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:id="@+id/imv_cal"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/cal" />
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/deprtTextInputLayyout"
+                            android:layout_width="123dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="50dp">
+                            <EditText
+                                android:id="@+id/ed_dept"
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:hint="Departing Date"
+                                android:onClick="setDate"
+
+                                android:paddingTop="16dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="@android:color/darker_gray" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/retnTextInputLaayout"
+                            android:layout_width="123dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp">
+
+                            <EditText
+                                android:id="@+id/ed_rtn"
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:hint="Returning Date"
+                                android:onClick="setDate1"
+                                android:paddingTop="16dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="@android:color/darker_gray" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="306dp"
+                        android:layout_height="88dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+
+                        <ImageView
+                            android:id="@+id/imv_pgr"
+                            android:layout_width="50dp"
+                            android:layout_height="108dp"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/psngr" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="31dp"
+                                android:text="passengers" />
+
+
+                            <TextView
+                                android:id="@+id/ed_pngr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="#CD2134"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/spinner1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.72"></Spinner>
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:id="@+id/rl"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                              <Spinner
+                                    android:id="@+id/spinner2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            </ScrollView>
+        <CheckBox
+            android:id="@+id/stpflgt"
+            android:layout_width="266dp"
+            android:layout_height="56dp"
+            android:text="NON STOP FLIGHTS" />
+        <Button
+            android:id="@+id/btnsrch"
+            android:layout_width="341dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/btnclr"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="Save"
+            android:text="Save And Book Flights "
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+            <Button
+            android:id="@+id/btnclr"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+                android:onClick="clear"
+                android:text="Clear"
+                android:layout_alignParentLeft="true"
+            android:textSize="20dp"/>
+            <Button
+                android:id="@+id/btnview"
+                android:layout_width="102dp"
+                android:onClick="Get"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:textSize="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
+
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nisha.googleflights.Passenger_class"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp">
+        <TextView
+            android:text="select"
+            android:textSize="20dp"
+            android:id="@+id/text_rad"
+            android:layout_width="313dp"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/rad_grp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/spinner1"
+            android:text="Economy"
+            android:layout_width="match_parent"
+            android:layout_height="62dp" />
+        <RadioButton
+            android:id="@+id/spinner2"
+            android:text="Bussiness Class"
+            android:layout_width="match_parent"
+            android:layout_height="77dp" />
+        <RadioButton
+            android:id="@+id/spinner3"
+            android:text="Premium Economy"
+            android:layout_width="match_parent"
+            android:layout_height="83dp" />
+
+        </RadioGroup>
+        <Button
+            android:id="@+id/done"
+            android:text="Done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

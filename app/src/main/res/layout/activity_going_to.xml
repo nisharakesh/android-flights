@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.nisha.googleflights.Search_Flights"
+    android:weightSum="2">
+
+    <EditText
+        android:id="@+id/go_plc"
+        android:layout_width="290dp"
+        android:layout_height="76dp"
+        android:textColor="@android:color/darker_gray"
+        android:paddingTop="@dimen/nav_header_vertical_spacing">
+
+
+
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btngo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_weight="0.31"
+            android:onClick="Sav"/>
+
+
+        <Button
+            android:id="@+id/btngn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="clear"
+            android:onClick="cle"
+            android:layout_weight="0.59" />
+    </LinearLayout>
+</LinearLayout>

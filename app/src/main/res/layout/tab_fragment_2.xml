@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Swipe"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+
+        <RadioButton
+            android:id="@+id/spinner1"
+            android:text="Economy"
+            android:layout_width="match_parent"
+            android:layout_height="62dp" />
+        <RadioButton
+            android:id="@+id/spinner2"
+            android:text="Bussiness Class"
+            android:layout_width="153dp"
+            android:layout_height="77dp" />
+        <RadioButton
+            android:id="@+id/spinner3"
+            android:text="Premium Economy"
+            android:layout_width="match_parent"
+            android:layout_height="83dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Done"
+        android:text="Done"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="129dp"
+        android:layout_marginStart="129dp" />
+
+</RelativeLayout>

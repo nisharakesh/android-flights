@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "739688202544",
+    "firebase_url": "https://flights-booking-fa342.firebaseio.com",
+    "project_id": "flights-booking-fa342",
+    "storage_bucket": "flights-booking-fa342.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739688202544:android:19fca8149f6a742b",
+        "android_client_info": {
+          "package_name": "com.nisha.googleflights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739688202544-q8tosthj93a21u7ai66oq0e3aljkivnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbhgisvrmqVmwPK1fErbyRGJkUjie_ltE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

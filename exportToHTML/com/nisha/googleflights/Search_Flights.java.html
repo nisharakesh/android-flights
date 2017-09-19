@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>Search_Flights.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,0,255); }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Search_Flights.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.nisha.googleflights; 
+ 
+</span><span class="s0">import </span><span class="s1">android.app.DatePickerDialog; 
+</span><span class="s0">import </span><span class="s1">android.app.Dialog; 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.view.MotionEvent; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.Button; 
+</span><span class="s0">import </span><span class="s1">android.widget.DatePicker; 
+</span><span class="s0">import </span><span class="s1">android.widget.EditText; 
+</span><span class="s0">import </span><span class="s1">android.widget.ImageView; 
+</span><span class="s0">import </span><span class="s1">android.widget.TextView; 
+ 
+</span><span class="s0">public class </span><span class="s1">Search_Flights </span><span class="s0">extends </span><span class="s1">AppCompatActivity { 
+    EditText  lev_frm; 
+    EditText  gng_to; 
+ EditText dpt_date; 
+   EditText rtn_date; 
+    EditText pasngr; 
+    EditText psngr_cls; 
+    Button srch; 
+    String dte; 
+    String dte1; 
+    </span><span class="s0">private int </span><span class="s1">yr, mnth, day,yr1, mnth1, day1; 
+ 
+ 
+ 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) 
+    { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_search__flights); 
+        lev_frm=(EditText ) findViewById(R.id.tv_levfrm); 
+        gng_to=(EditText ) findViewById(R.id.tv_goto); 
+        dpt_date=(EditText) findViewById(R.id.tv_deptdate); 
+        rtn_date=(EditText) findViewById(R.id.rtn_date); 
+        pasngr=(EditText) findViewById(R.id.tv_pass); 
+        psngr_cls=(EditText) findViewById(R.id.cls); 
+        srch=(Button) findViewById(R.id.btnsrch); 
+ 
+ 
+ 
+        dpt_date.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                sss(</span><span class="s2">111</span><span class="s1">).show(); 
+            } 
+        }); 
+ 
+        dte=  dpt_date.getText().toString(); 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        lev_frm.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v)  { 
+                startActivity(</span><span class="s0">new </span><span class="s1">Intent(Search_Flights.</span><span class="s0">this</span><span class="s1">, Leaving_from.</span><span class="s0">class</span><span class="s1">)); 
+ 
+            } 
+        }); 
+        gng_to.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                Intent i=</span><span class="s0">new </span><span class="s1">Intent(Search_Flights.</span><span class="s0">this</span><span class="s1">,Going_to.</span><span class="s0">class</span><span class="s1">); 
+                startActivity(i); 
+            } 
+        }); 
+ 
+        rtn_date.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                Intent i=</span><span class="s0">new </span><span class="s1">Intent(Search_Flights.</span><span class="s0">this</span><span class="s1">,Return_date.</span><span class="s0">class</span><span class="s1">); 
+                startActivity(i); 
+            } 
+        }); 
+        pasngr.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                Intent i=</span><span class="s0">new </span><span class="s1">Intent(Search_Flights.</span><span class="s0">this</span><span class="s1">,Passenger.</span><span class="s0">class</span><span class="s1">); 
+                startActivity(i); 
+            } 
+        }); 
+        psngr_cls.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                Intent i=</span><span class="s0">new </span><span class="s1">Intent(Search_Flights.</span><span class="s0">this</span><span class="s1">,Passenger_class.</span><span class="s0">class</span><span class="s1">); 
+                startActivity(i); 
+            } 
+        }); 
+        srch.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                Intent i=</span><span class="s0">new </span><span class="s1">Intent(Search_Flights.</span><span class="s0">this</span><span class="s1">,New_class.</span><span class="s0">class</span><span class="s1">); 
+                startActivity(i); 
+            } 
+        }); 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    } 
+    </span><span class="s0">protected </span><span class="s1">Dialog sss(</span><span class="s0">int </span><span class="s1">id) 
+    { 
+        </span><span class="s0">if </span><span class="s1">(id == </span><span class="s2">111</span><span class="s1">) 
+        { 
+            </span><span class="s0">return new </span><span class="s1">DatePickerDialog(</span><span class="s0">this</span><span class="s1">, pickerlistener, yr, mnth, day); 
+        } 
+ 
+        </span><span class="s0">return null</span><span class="s1">; 
+    } 
+    </span><span class="s0">private </span><span class="s1">DatePickerDialog.OnDateSetListener pickerlistener = </span><span class="s0">new </span><span class="s1">DatePickerDialog.OnDateSetListener() 
+    { 
+        @Override 
+        </span><span class="s0">public void </span><span class="s1">onDateSet(DatePicker datePicker, </span><span class="s0">int </span><span class="s1">selectedyear, </span><span class="s0">int </span><span class="s1">selectedmoth, </span><span class="s0">int </span><span class="s1">selectedday) 
+        { 
+            yr = selectedyear; 
+            mnth = selectedmoth; 
+            day = selectedday; 
+ 
+            dte=String.valueOf(day)+</span><span class="s3">&quot;/&quot;</span><span class="s1">+mnth+</span><span class="s3">&quot;/&quot;</span><span class="s1">+yr; 
+           dpt_date.setText(dte); 
+        } 
+    }; 
+ 
+ 
+} 
+</span></pre>
+</body>
+</html>
